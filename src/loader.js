@@ -156,7 +156,7 @@ function file(filename) {
 }
 
 function fs() {
-  return typeof require === 'function' && require('fs');
+  return typeof require === 'function' && Object.keys(require('fs')).length > 0 && require('fs');
 }
 
 function startsWith(string, query) {
