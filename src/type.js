@@ -64,5 +64,9 @@ function isNumber(_) {
 }
 
 function isInteger(_) {
-  return isNumber(_) && (_=+_) === ~~_;
+  if (isNumber(_)) {
+    _ = +_;
+    return _ === ~~_;
+  }
+  return false;
 }
